@@ -1,6 +1,6 @@
 # Welcome to NBG Developer Studio!
 
-Read the following instructions in order start working frictionlessly in SourceLair:
+Read the following instructions in order start working frictionlessly in NBG Developer Studio:
 
 1. Customize your editor by clicking on the gear icon at the top right corner of the editor ->
 
