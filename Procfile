@@ -1,0 +1,2 @@
+# This file lets NBG Developer Studio know how to run your .NET Core web server
+web: export ASPNETCORE_URLS="http://+:$PORT" && dotnet restore && dotnet build && dotnet publish && dotnet /mnt/project/bin/Debug/netcoreapp2.0/netcoresb.dll
