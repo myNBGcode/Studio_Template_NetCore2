@@ -43,7 +43,7 @@ namespace openbanknetcore.Controllers
             client.DefaultRequestHeaders.Add("application_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("sandbox_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("x-ibm-client-id", "b04f0b25-9ccb-4518-a323-54ebc744b7e2");
-            HttpResponseMessage response = await client.PostAsync("https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1/sandbox", content);
+            HttpResponseMessage response = await client.PostAsync("https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1.1/sandbox", content);
             var responseText = await response.Content.ReadAsStringAsync();
             client.DefaultRequestHeaders.Accept.Clear();
             response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/json");
@@ -70,7 +70,7 @@ namespace openbanknetcore.Controllers
             client.DefaultRequestHeaders.Add("application_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("sandbox_id", "REPLACE_SANDBOX_ID");
             client.DefaultRequestHeaders.Add("x-ibm-client-id", "b04f0b25-9ccb-4518-a323-54ebc744b7e2");
-            HttpResponseMessage response = await client.GetAsync("https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1/obp/my/accounts");
+            HttpResponseMessage response = await client.GetAsync("https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1.1/obp/my/accounts");
 
             string responseText = await response.Content.ReadAsStringAsync();
             dynamic obj = JsonConvert.DeserializeObject(responseText);
@@ -85,7 +85,7 @@ namespace openbanknetcore.Controllers
             //replace sandbox_id value with the id of an existing sandbox
             string sandbox_id = "REPLACE_SANDBOX_ID";
             var client = new HttpClient();
-            Uri uri = new Uri("https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1/sandbox/" + sandbox_id);
+            Uri uri = new Uri("https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1.1/sandbox/" + sandbox_id);
             client.DefaultRequestHeaders.Add("request_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("provider", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("provider_id", "REPLACE_THIS_VALUE");
