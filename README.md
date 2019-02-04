@@ -12,4 +12,14 @@ Read the following instructions in order start working frictionlessly in NBG Dev
 
 5. If you have any thoughts, issues or proposals for SourceLair, it would be great if you could send us an email at support@sourcelair.com
 
+## About the Net Core Template
+
+Nbg's Net Core template is a host template that serves a simple .html index page
+
+That page is consisted by three links which you can click and then a function is called which makes a call to NBG's API
+
+In order to create your personal sandbox in your project you need to change the REPLACE_THIS_VALUE parameter of the Controllers/CallsController.cs file to match your personal data
+
+The response of your calls will be visible in a new browser window
+
 Have fun coding in your browser!
