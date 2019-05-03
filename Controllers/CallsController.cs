@@ -10,18 +10,19 @@ using System.Text;
 
 
 
-namespace openbanknetcore.Controllers
+namespace netcoresb
 {
-    [Route("[controller]")]
     public class CallsController : Controller
     {
+        [Route("")]
+        [Route("[controller]/Index")]
         [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
-        [HttpGet("createsandbox")]
+        [HttpGet("[controller]/createsandbox")]
         //Create Sandbox
         public async Task<IActionResult> createSandbox()
         {
@@ -53,7 +54,7 @@ namespace openbanknetcore.Controllers
 
         }
 
-        [HttpGet("myAccounts")]
+        [HttpGet("[controller]/myAccounts")]
         public async Task<IActionResult> myAccounts()
         {
             //Get a list of banks supported for current application ID.
@@ -78,7 +79,7 @@ namespace openbanknetcore.Controllers
 
         }
 
-        [HttpGet("deleteSandbox")]
+        [HttpGet("[controller]/deleteSandbox")]
         //Delete Sandbox
         public async Task<IActionResult> deleteSandbox()
         {
