@@ -43,7 +43,7 @@ namespace netcoresb
             client.DefaultRequestHeaders.Add("user_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("application_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("sandbox_id", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("x-ibm-client-id", "b04f0b25-9ccb-4518-a323-54ebc744b7e2");
+            client.DefaultRequestHeaders.Add("x-ibm-client-id", "REPLACE_THIS_VALUE");
             HttpResponseMessage response = await client.PostAsync("https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1.1/sandbox", content);
             var responseText = await response.Content.ReadAsStringAsync();
             client.DefaultRequestHeaders.Accept.Clear();
@@ -70,7 +70,7 @@ namespace netcoresb
             client.DefaultRequestHeaders.Add("user_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("application_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("sandbox_id", "REPLACE_SANDBOX_ID");
-            client.DefaultRequestHeaders.Add("x-ibm-client-id", "b04f0b25-9ccb-4518-a323-54ebc744b7e2");
+            client.DefaultRequestHeaders.Add("x-ibm-client-id", "REPLACE_THIS_VALUE");
             HttpResponseMessage response = await client.GetAsync("https://apis.nbg.gr/public/sandbox/obp.account.sandbox/v1.1/obp/my/accounts");
 
             string responseText = await response.Content.ReadAsStringAsync();
@@ -95,7 +95,7 @@ namespace netcoresb
             client.DefaultRequestHeaders.Add("user_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("application_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("sandbox_id", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("x-ibm-client-id", "b04f0b25-9ccb-4518-a323-54ebc744b7e2");
+            client.DefaultRequestHeaders.Add("x-ibm-client-id", "REPLACE_THIS_VALUE");
             HttpResponseMessage response = await client.DeleteAsync(uri);
             string responseText = await response.Content.ReadAsStringAsync();
             return Ok(responseText);
