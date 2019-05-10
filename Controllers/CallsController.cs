@@ -36,13 +36,6 @@ namespace netcoresb
             StringContent content = new StringContent(JsonConvert.SerializeObject(dict), Encoding.UTF8, "text/json");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("text/json"));
-            client.DefaultRequestHeaders.Add("provider", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("provider_id", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("provider_username", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("username", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("user_id", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("application_id", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("sandbox_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("Client-Id", "REPLACE_THIS_VALUE");
             HttpResponseMessage response = await client.PostAsync("https://apis.nbg.gr/sandbox/obpaccount/headers/v1.3/sandbox", content);
             var responseText = await response.Content.ReadAsStringAsync();
@@ -87,14 +80,6 @@ namespace netcoresb
             string sandbox_id = "REPLACE_SANDBOX_ID";
             var client = new HttpClient();
             Uri uri = new Uri("https://apis.nbg.gr/sandbox/obpaccount/headers/v1.3/sandbox/" + sandbox_id);
-            client.DefaultRequestHeaders.Add("request_id", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("provider", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("provider_id", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("provider_username", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("username", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("user_id", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("application_id", "REPLACE_THIS_VALUE");
-            client.DefaultRequestHeaders.Add("sandbox_id", "REPLACE_THIS_VALUE");
             client.DefaultRequestHeaders.Add("Client-Id", "REPLACE_THIS_VALUE");
             HttpResponseMessage response = await client.DeleteAsync(uri);
             string responseText = await response.Content.ReadAsStringAsync();
